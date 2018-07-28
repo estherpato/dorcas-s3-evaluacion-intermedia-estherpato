@@ -9,6 +9,17 @@
     background-color: aliceblue;
 }
 
+.PokemonCard__container--click {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: goldenrod;
+}
+
 .PokemonCard-image__container {
     display: flex;
     align-items: center;

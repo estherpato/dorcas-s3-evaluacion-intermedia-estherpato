@@ -3,11 +3,20 @@ import './PokemonCard.css'
 
 class PokemonCard extends Component {
     render() {
-        const { picURL, name, types } = this.props
+        const {
+            picURL,
+            name,
+            types,
+            cardBackground
+        } = this.props
         return (
-            <div className="PokemonCard__container">
+            <div className={cardBackground}>
                 <div className="PokemonCard-image__container">
-                    <img className="PokemonCard-image" src={picURL} alt={`Este es el pokemon ${name}`} />
+                    <img
+                        className="PokemonCard-image"
+                        src={picURL}
+                        alt={`Este es el pokemon ${name}`}
+                    />
                 </div>
                 <h3 className="PokemonCard-name">{name}</h3>
 
