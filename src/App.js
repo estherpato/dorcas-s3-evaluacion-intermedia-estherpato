@@ -7,7 +7,7 @@ class App extends Component {
     const { pokemonList } = this.props
     return (
       <Fragment>
-        <h1>Mi lista de Pokemon</h1>
+        <h1>My Pokemon List</h1>
         <PokemonList pokemon={pokemonList} />
       </Fragment>
     );

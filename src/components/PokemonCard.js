@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
+import './PokemonCard.css'
 
 class PokemonCard extends Component {
     render() {
         const { picURL, name, types } = this.props
         return (
-            <div>
-                <img src={picURL} alt={`Este es el pokemon ${name}`} />
-                <h2>{name}</h2>
-                <div>{types}</div>
+            <div className="PokemonCard__container">
+                <div className="PokemonCard-image__container">
+                    <img className="PokemonCard-image" src={picURL} alt={`Este es el pokemon ${name}`} />
+                </div>
+                <h3 className="PokemonCard-name">{name}</h3>
+
+                <ul className="PokemonCard-types__container">
+                    {types.map(type =>
+                        <li key={type} className="PokemonCard-types__item">
+                            {type}
+                        </li>
+                    )}
+                </ul>
             </div>
         );
     }

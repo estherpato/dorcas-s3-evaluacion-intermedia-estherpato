@@ -5,6 +5,10 @@
 }
 
 body {
-  background-color: lightcoral;
+  background-image: url('./images/background.png');
   font-family: sans-serif;
+}
+
+li {
+  list-style: none;
 }
