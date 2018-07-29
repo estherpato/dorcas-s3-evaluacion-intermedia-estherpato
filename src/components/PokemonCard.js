@@ -10,7 +10,6 @@ class PokemonCard extends Component {
                     <img className="PokemonCard-image" src={picURL} alt={`Este es el pokemon ${name}`} />
                 </div>
                 <h3 className="PokemonCard-name">{name}</h3>
-
                 <ul className="PokemonCard-types__container">
                     {types.map(type =>
                         <li key={type} className="PokemonCard-types__item">
