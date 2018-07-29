@@ -7,18 +7,19 @@ class App extends Component {
     super();
     this.handleClick = this.handleClick.bind(this);
     this.bgnormal = 'PokemonCard__container'
-    // this.bgclicked = 'PokemonCard__container--click'
+    this.bgclicked = 'PokemonCard__container--click'
 }
 
   //callback
   handleClick(event) {
     
-    if(event.target.className.includes(this.bgnormal)) {
-      this.bgnormal = 'PokemonCard__container--click';
+    if(event.target) {
+      this.bgnormal = this.bgclicked;
       console.log('funciono')
     } else {
-      this.bgnormal = 'PokemonCard__container';
+      this.bgnormal;
     }
+    this.forceUpdate();
   }
 
   render() {
