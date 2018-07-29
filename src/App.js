@@ -7,8 +7,12 @@ class App extends Component {
     const { pokemonList } = this.props
     return (
       <Fragment>
-        <h1 className="App-title">my pokemon list</h1>
-        <PokemonList pokemon={pokemonList} />
+        <header>
+          <h1 className="App-title">my pokemon list</h1>
+        </header>
+        <main>
+          <PokemonList pokemon={pokemonList} />
+        </main>
       </Fragment>
     );
   }
