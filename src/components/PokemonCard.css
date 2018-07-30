@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     background-color: aliceblue;
+    box-shadow: 2px 2px 5px grey;
 }
 
 .PokemonCard__container--click {
@@ -17,7 +18,7 @@
     border-radius: 10px;
     align-items: center;
     justify-content: center;
-    background-color: goldenrod;
+    background-color: coral;
 }
 
 .PokemonCard-image__container {

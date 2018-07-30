@@ -14,10 +14,10 @@ class App extends Component {
 }
 
   //callback
-  handleClick() {
-    this.setState(
-      {background: 'PokemonCard__container--click'}
-    )
+  handleClick(event) {
+    this.setState((event) => ({
+      background: (event.background === 'PokemonCard__container') ? 'PokemonCard__container--click' : 'PokemonCard__container'
+    }));
   }
 
   render() {
