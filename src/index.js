@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import App from './components/App';
 
 const pokemons = [
     { "id": 1, "name": "bulbasaur", "types": ["poison", "grass"], "evolution": null, "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" },
@@ -18,4 +17,3 @@ const pokemons = [
 ];
 
 ReactDOM.render(<App pokemonList={pokemons} />, document.getElementById('root'));
-registerServiceWorker();
