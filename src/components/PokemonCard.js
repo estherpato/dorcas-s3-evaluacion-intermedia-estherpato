@@ -19,7 +19,6 @@ class PokemonCard extends Component {
                     />
                 </div>
                 <h3 className="PokemonCard-name">{name}</h3>
-
                 <ul className="PokemonCard-types__container">
                     {types.map(type =>
                         <li key={type} className="PokemonCard-types__item">

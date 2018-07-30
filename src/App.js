@@ -26,11 +26,20 @@ class App extends Component {
     const { pokemonList } = this.props
     return (
       <Fragment>
+<<<<<<< HEAD
         <h1 className="App-title">my pokemon list</h1>
         <PokemonList 
         pokemon={pokemonList}
         callback={this.handleClick}
         backgroundColor={this.bgnormal} />
+=======
+        <header>
+          <h1 className="App-title">my pokemon list</h1>
+        </header>
+        <main>
+          <PokemonList pokemon={pokemonList} />
+        </main>
+>>>>>>> master
       </Fragment>
     );
   }
