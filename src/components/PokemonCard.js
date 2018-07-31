@@ -2,16 +2,31 @@ import React, { Component } from 'react';
 import './PokemonCard.css'
 
 class PokemonCard extends Component {
+    constructor() {
+        super();
+    
+        this.state = {
+          background: 'PokemonCard__container'
+        }; 
+    
+        this.handleClick = this.handleClick.bind(this);  
+    }
+    
+      //callback
+      handleClick() {
+        this.setState(() => ({
+          background: (this.state.background === 'PokemonCard__container') ? 'PokemonCard__container--click' : 'PokemonCard__container'
+        }));
+      }
     render() {
         const {
             picURL,
             name,
             types,
-            background,
-            callback
         } = this.props
+
         return (
-            <div className={background} onClick={callback}>
+            <div className={this.state.background} onClick={this.handleClick}>
                 <div className="PokemonCard-image__container">
                     <img
                         className="PokemonCard-image"
