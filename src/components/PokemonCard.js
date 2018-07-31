@@ -7,10 +7,11 @@ class PokemonCard extends Component {
             picURL,
             name,
             types,
-            cardBackground
+            background,
+            callback
         } = this.props
         return (
-            <div className={cardBackground}>
+            <div className={background} onClick={callback}>
                 <div className="PokemonCard-image__container">
                     <img
                         className="PokemonCard-image"

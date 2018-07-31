@@ -4,19 +4,19 @@ import './PokemonList.css';
 
 class PokemonList extends Component {
     render() {
-        const { pokemon, backgroundClass, callback } = this.props
+        const { pokemon, background, callback} = this.props
         return (
             <ul className="PokemonList-wrapper">
                 {pokemon.map(pokemon =>
                     <li
-                        onClick={callback}
                         key={pokemon.id}
                     >
                         <PokemonCard
+                            callback={callback}
                             picURL={pokemon.url}
                             name={pokemon.name}
                             types={pokemon.types}
-                            cardBackground={backgroundClass}
+                            background={background}
                         />
                     </li>)}
             </ul>

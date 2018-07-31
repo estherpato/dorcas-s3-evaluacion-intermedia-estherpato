@@ -6,22 +6,25 @@ class App extends Component {
   constructor() {
     super();
 
-    this.handleClick = this.handleClick.bind(this);
-
     this.state = {
       background: 'PokemonCard__container'
-    }   
+    }; 
+
+    this.handleClick = this.handleClick.bind(this);
+    
 }
 
   //callback
   handleClick() {
-    this.setState((prevState) => ({
-      background: (prevState.background === 'PokemonCard__container') ? 'PokemonCard__container--click' : 'PokemonCard__container'
+    this.setState(() => ({
+      background: (this.state.background === 'PokemonCard__container') ? 'PokemonCard__container--click' : 'PokemonCard__container'
     }));
   }
 
   render() {
     const { pokemonList } = this.props
+    const { background } = this.state
+
     return (
       <Fragment>
         <header>
@@ -30,7 +33,7 @@ class App extends Component {
         <main>
           <PokemonList 
           pokemon={pokemonList} 
-          backgroundClass={this.state.background}
+          background={background}
           callback={this.handleClick}
           />
         </main>
