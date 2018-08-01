@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './PokemonCard.css'
 
 class PokemonCard extends Component {
@@ -45,6 +46,12 @@ class PokemonCard extends Component {
             </div>
         );
     }
+}
+
+PokemonCard.PropTypes = {
+    picURL: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    types: PropTypes.array
 }
 
 export default PokemonCard;
