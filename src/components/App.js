@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import './App.css';
 import PokemonList from './PokemonList';
 
@@ -21,6 +22,10 @@ class App extends Component {
       </Fragment>
     );
   }
+}
+
+App.PropTypes = {
+  pokemonList: PropTypes.array
 }
 
 export default App;
