@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import PokemonCard from './PokemonCard';
 import './PokemonList.css';
 
@@ -20,6 +21,10 @@ class PokemonList extends Component {
             </ul>
         );
     }
+}
+
+PokemonList.PropTypes = {
+    pokemon: PropTypes.array
 }
 
 export default PokemonList;

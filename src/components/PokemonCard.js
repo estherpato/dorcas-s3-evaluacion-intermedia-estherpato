@@ -5,20 +5,20 @@ import './PokemonCard.css'
 class PokemonCard extends Component {
     constructor() {
         super();
-    
+
         this.state = {
-          background: 'PokemonCard__container'
-        }; 
-    
-        this.handleClick = this.handleClick.bind(this);  
+            background: 'PokemonCard__container'
+        };
+
+        this.handleClick = this.handleClick.bind(this);
     }
-    
-      //callback
-      handleClick() {
+
+    //callback
+    handleClick() {
         this.setState(() => ({
-          background: (this.state.background === 'PokemonCard__container') ? 'PokemonCard__container--click' : 'PokemonCard__container'
+            background: (this.state.background === 'PokemonCard__container') ? 'PokemonCard__container--click' : 'PokemonCard__container'
         }));
-      }
+    }
     render() {
         const {
             picURL,
